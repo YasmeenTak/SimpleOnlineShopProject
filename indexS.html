@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Simple Online Shop
+    </title>
+    <link rel="stylesheet" href="styleS.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Title*</label><label class="validation-error hide" id="titleValidationError">This field is required.</label>
+                        <input type="text" name="title" id="title">
+                    </div>
+                
+                    <div>    
+                        <!-- <label>Category</label>
+                        <input type="text" name="empCode" id="empCode"> -->
+                            <label for="empCode">Category</label>
+                            <input type="text" name="empCode" id="empCode">
+                            <select id="empCode">
+                              <option value="Dresses">Dresses</option>
+                              <option value="T-shirt">T-shirt</option>
+                              <option value="Trouser">Trouser</option>
+                              <option value="skirt">Skirt</option>
+                              <option value="Shoes">Shoes</option>
+                              <option value="Bags">Bags</option>
+                            </select>  
+                    </div>
+                    <div>
+                        <label>Description</label>
+                        <input type="text" name="description" id="description">
+                    </div>
+                    <div>
+                        <label>Location</label>
+                        <input type="text" name="location" id="location">
+                    </div>
+
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                     <div>
+                        <label>Mobile phone number</label>
+                        <input type="text" name="phoneNum" id="phoneNum">
+                    </div>
+                   
+                    <div>
+                        <label>Contact me by :</label>
+                        <input type="text" name="contactBy" id="contactBy">
+ <div>
+  <label>
+    <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Both</label>
+  <label>
+    <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Phone</label>
+  <label>
+    <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Website Chat</label>
+</div>
+
+                    </div>
+
+
+
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Location</th>
+                            <th>Name</th>
+                          <!--   <th>Mobile phone number</th>
+                            <th>Email address</th>
+                            <th><label>Contact me by</label></th>
+                            <th>img</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="scriptS.js"></script>
+</body>
+
+</html>
