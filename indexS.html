@@ -12,12 +12,20 @@
 </head>
 
 <body>
+  <header id="header">
+    <h1>Simple Online Shop</h1>
+
+  </header>
+  <label>Place an Ad</label>
+
+
     <table>
-        <tr>
             <td>
+                 <!-- to prevent form from being submitted -->
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                     <div>
-                        <label>Title*</label><label class="validation-error hide" id="titleValidationError">This field is required.</label>
+                        <label>Title*</label>
+                        <label class="validation-error hide" id="titleValidationError">This field is required.</label>
                         <input type="text" name="title" id="title">
                     </div>
                 
@@ -41,6 +49,13 @@
                     </div>
 
                     <div>
+                        <label>Photos</label>
+                        <label class="custom-file-upload" >
+                        <input type="file" id="photos"/>
+                        </label>
+                    </div>
+
+                    <div>
                         <label>Location</label>
                         <input type="text" name="location" id="location">
                     </div>
@@ -57,24 +72,24 @@
                     <div>
                         <label>Contact me by :</label>
                         <input type="text" name="contactBy" id="contactBy">
- <div>
-  <label>
-    <input type="checkbox" class="radio" value="1" name="contact[1][]" />Both</label>
-  <label>
-    <input type="checkbox" class="radio" value="1" name="contact[1][]" />Phone</label>
-  <label>
-    <input type="checkbox" class="radio" value="1" name="contact[1][]" />Website Chat</label>
-</div>
-
                     </div>
+           
+            <!-- <label>
+            <input type="checkbox" class="radio" value="1" name="contact[1][]" />Both</label>
+            <label>
+            <input type="checkbox" class="radio" value="1" name="contact[1][]" />Phone</label>
+            <label>
+            <input type="checkbox" class="radio" value="1" name="contact[1][]" />Website Chat</label> -->
+            
 
 
 
-                    <div  class="form-action-buttons">
+                    <div  class="submitBtn">
                         <input type="submit" value="Submit">
                     </div>
                 </form>
-
+    </td>
+    </table>
             </td>
             <td>
                 <table class="list" id="diplayList">
@@ -83,6 +98,7 @@
                             <th>Title</th> <!-- 0 -->
                             <th>Category</th> <!-- 1 -->
                             <th>Description</th> <!-- 2 -->
+                            <th>Photo</th>
                             <th>Location</th> <!-- 3 -->
                             <th>Name</th> <!-- 4 -->
                             <th>Mobile number</th> <!-- 5 -->
@@ -96,9 +112,9 @@
 
                     </tbody>
                 </table>
-            </td>
-        </tr>
-    </table>
+
+
+        
     <script src="scriptS.js"></script>
 </body>
 

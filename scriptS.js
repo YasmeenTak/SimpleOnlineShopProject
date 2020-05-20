@@ -16,10 +16,12 @@ function readFormData() {
     formData["title"] = document.getElementById("title").value;
     formData["category"] = document.getElementById("category").value;
     formData["description"] = document.getElementById("description").value;
+    formData["photos"]=document.getElementById("photos").value;
     formData["location"] = document.getElementById("location").value;
     formData["name"]=document.getElementById("name").value;
     formData["phoneNum"]=document.getElementById("phoneNum").value;
     formData["contactBy"]=document.getElementById("contactBy").value;
+
     return formData;
 }
 
@@ -36,20 +38,23 @@ function insertNewRecord(data) {
     cell3.innerHTML = data.description;
 
     cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.location;
+    cell4.innerHTML = data.photos;
 
     cell5 = newRow.insertCell(4);
-    cell5.innerHTML = data.name;
+    cell5.innerHTML = data.location;
 
     cell6 = newRow.insertCell(5);
-    cell6.innerHTML = data.phoneNum;
+    cell6.innerHTML = data.name;
 
     cell7 = newRow.insertCell(6);
-    cell7.innerHTML = data.contactBy;
-
+    cell7.innerHTML = data.phoneNum;
 
     cell8 = newRow.insertCell(7);
-    cell8.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+    cell8.innerHTML = data.contactBy;
+
+
+    cell9 = newRow.insertCell(8);
+    cell9.innerHTML = `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 }
 
@@ -57,6 +62,7 @@ function resetForm() {
     document.getElementById("title").value = "";
     document.getElementById("category").value = "";
     document.getElementById("description").value = "";
+    document.getElementById("photos").value = "";
     document.getElementById("location").value = "";
     document.getElementById("name").value = "";
     document.getElementById("phoneNum").value = "";
@@ -69,20 +75,22 @@ function onEdit(td) {
     document.getElementById("title").value = selectedRow.cells[0].innerHTML;
     document.getElementById("category").value = selectedRow.cells[1].innerHTML;
     document.getElementById("description").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("location").value = selectedRow.cells[3].innerHTML;
-    document.getElementById("name").value = selectedRow.cells[4].innerHTML;
-    document.getElementById("phoneNum").value = selectedRow.cells[5].innerHTML;
-    document.getElementById("contactBy").value = selectedRow.cells[6].innerHTML;
+    document.getElementById("photos").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("location").value = selectedRow.cells[4].innerHTML;
+    document.getElementById("name").value = selectedRow.cells[5].innerHTML;
+    document.getElementById("phoneNum").value = selectedRow.cells[6].innerHTML;
+    document.getElementById("contactBy").value = selectedRow.cells[7].innerHTML;
 
 }
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.title;
     selectedRow.cells[1].innerHTML = formData.category;
     selectedRow.cells[2].innerHTML = formData.description;
-    selectedRow.cells[3].innerHTML = formData.location;
-    selectedRow.cells[4].innerHTML = formData.name;
-    selectedRow.cells[5].innerHTML = formData.phoneNum;
-    selectedRow.cells[6].innerHTML = formData.contactBy;
+    selectedRow.cells[3].innerHTML = formData.photos;
+    selectedRow.cells[4].innerHTML = formData.location;
+    selectedRow.cells[5].innerHTML = formData.name;
+    selectedRow.cells[6].innerHTML = formData.phoneNum;
+    selectedRow.cells[7].innerHTML = formData.contactBy;
 }
 
 function onDelete(td) {

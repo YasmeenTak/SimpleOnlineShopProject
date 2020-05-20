@@ -1,10 +1,31 @@
-body > table{
-    width: 80%;
+#header{
+ text-align: center;
+ color: #E38E8C;
+ height: 80px;
+ padding: 15px;
+ font-family: sans-serif;
+}
+#header h1{
+ padding: 5px;
 }
 
-table{
-    border-collapse: collapse;
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color:#343C44;
 }
+table {
+    border: 5px solid #343C44;
+    border-radius: 25px;
+    background-color:#E38E8C;
+    margin: 0 auto;
+    padding: 15px; 
+    width: 60%;  
+
+}
+
 table.list{
     width:100%;
 }
@@ -39,8 +60,10 @@ input[type=submit]{
     cursor: pointer;
 }
 
-form div.form-action-buttons{
-    text-align: right;
+
+
+form div.submitBtn{
+    text-align: center;
 }
 
 a{
@@ -53,8 +76,20 @@ a{
 label.validation-error{
     color:   red;
     margin-left: 5px;
+
 }
 
 .hide{
     display:none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 2px solid #343C44;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
 }
