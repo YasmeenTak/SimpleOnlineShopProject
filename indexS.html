@@ -23,10 +23,10 @@
                 
                     <div>    
                         <!-- <label>Category</label>
-                        <input type="text" name="empCode" id="empCode"> -->
-                            <label for="empCode">Category</label>
-                            <input type="text" name="empCode" id="empCode">
-                            <select id="empCode">
+                        <input type="text" name="category" id="category"> -->
+                            <label for="category">Category</label>
+                            <input type="text" name="category" id="category">
+                            <select id="category">
                               <option value="Dresses">Dresses</option>
                               <option value="T-shirt">T-shirt</option>
                               <option value="Trouser">Trouser</option>
@@ -39,6 +39,7 @@
                         <label>Description</label>
                         <input type="text" name="description" id="description">
                     </div>
+
                     <div>
                         <label>Location</label>
                         <input type="text" name="location" id="location">
@@ -58,11 +59,11 @@
                         <input type="text" name="contactBy" id="contactBy">
  <div>
   <label>
-    <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Both</label>
+    <input type="checkbox" class="radio" value="1" name="contact[1][]" />Both</label>
   <label>
-    <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Phone</label>
+    <input type="checkbox" class="radio" value="1" name="contact[1][]" />Phone</label>
   <label>
-    <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Website Chat</label>
+    <input type="checkbox" class="radio" value="1" name="contact[1][]" />Website Chat</label>
 </div>
 
                     </div>
@@ -73,20 +74,22 @@
                         <input type="submit" value="Submit">
                     </div>
                 </form>
+
             </td>
             <td>
-                <table class="list" id="employeeList">
+                <table class="list" id="diplayList">
                     <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Category</th>
-                            <th>Description</th>
-                            <th>Location</th>
-                            <th>Name</th>
-                          <!--   <th>Mobile phone number</th>
-                            <th>Email address</th>
-                            <th><label>Contact me by</label></th>
-                            <th>img</th> -->
+                            <th>Title</th> <!-- 0 -->
+                            <th>Category</th> <!-- 1 -->
+                            <th>Description</th> <!-- 2 -->
+                            <th>Location</th> <!-- 3 -->
+                            <th>Name</th> <!-- 4 -->
+                            <th>Mobile number</th> <!-- 5 -->
+                            <th><label>Contact me by</label></th> <!-- 6 -->
+                            <th></th> <!-- 7 -->
+                            
+
                         </tr>
                     </thead>
                     <tbody>
