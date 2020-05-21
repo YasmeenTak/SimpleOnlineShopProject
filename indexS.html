@@ -23,17 +23,18 @@
             <td>
                  <!-- to prevent form from being submitted -->
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+
+                    <!-- 1 -->
                     <div>
-                        <label>Title*</label>
+                        <label id="titleLab">Title*</label>
                         <label class="validation-error hide" id="titleValidationError">This field is required.</label>
-                        <input type="text" name="title" id="title">
+                        <input type="text" name="value" id="title">
                     </div>
-                
+                    <!-- 2 -->
                     <div>    
                         <!-- <label>Category</label>
                         <input type="text" name="category" id="category"> -->
                             <label for="category">Category</label>
-                            <input type="text" name="category" id="category">
                             <select id="category">
                               <option value="Dresses">Dresses</option>
                               <option value="T-shirt">T-shirt</option>
@@ -43,45 +44,52 @@
                               <option value="Bags">Bags</option>
                             </select>  
                     </div>
+                    <!-- 3 -->
                     <div>
                         <label>Description</label>
-                        <input type="text" name="description" id="description">
+                        <input type="text" name="Description" id="description">
                     </div>
-
+                    <!-- 4 -->
                     <div>
-                        <label>Photos</label>
-                        <label class="custom-file-upload" >
-                        <input type="file" id="photos"/>
+                        <label>Photo</label>
+                        <label class="custom-file-upload" > + Add Photo
+                        <input type="file" id="photos"onchange="readURL(this)" />
                         </label>
                     </div>
 
                     <div>
+                        <label>Price</label>
+                        <input type="text" name="Price" id="price">
+                    </div>
+
+                    <!-- 5 -->
+                    <div>
                         <label>Location</label>
                         <input type="text" name="location" id="location">
                     </div>
-
+                    <!-- 6 -->
                     <div>
                         <label>Name</label>
                         <input type="text" name="name" id="name">
                     </div>
-                     <div>
-                        <label>Mobile phone number</label>
+                    <!-- 7 -->
+                    <div>
+                        <label>Mobile No.</label>
                         <input type="text" name="phoneNum" id="phoneNum">
                     </div>
-                   
+                    <!-- 8 -->
+                    <br>
                     <div>
-                        <label>Contact me by :</label>
-                        <input type="text" name="contactBy" id="contactBy">
-                    </div>
-           
-            <!-- <label>
-            <input type="checkbox" class="radio" value="1" name="contact[1][]" />Both</label>
-            <label>
-            <input type="checkbox" class="radio" value="1" name="contact[1][]" />Phone</label>
-            <label>
-            <input type="checkbox" class="radio" value="1" name="contact[1][]" />Website Chat</label> -->
-            
-
+                       <label id="contLabel">Contact me by:</label> </div>
+                       <div id="contList">
+                        <label name="contactBy" id="contactBy">
+                        <input type="radio" class="radio" value="Both" name="contact" id="1" />Both</label>
+                        <label>
+                        <input type="radio" class="radio" value="Phone" name="contact" id="1" />Phone</label>
+                        <label>
+                        <input type="radio" class="radio" value="Website Chat" name="contact" id="1" />Website Chat</label>
+                       </div>  
+                    <br>
 
 
                     <div  class="submitBtn">
@@ -99,11 +107,11 @@
                             <th>Category</th> <!-- 1 -->
                             <th>Description</th> <!-- 2 -->
                             <th>Photo</th>
+                            <th>Price</th>
                             <th>Location</th> <!-- 3 -->
                             <th>Name</th> <!-- 4 -->
                             <th>Mobile number</th> <!-- 5 -->
-                            <th><label>Contact me by</label></th> <!-- 6 -->
-                            <th></th> <!-- 7 -->
+                            <th>Edit/Delete</th> <!-- 7 -->
                             
 
                         </tr>
@@ -113,7 +121,7 @@
                     </tbody>
                 </table>
 
-
+<a href="https://www.instagram.com/simple.onlineshop/" style="float: right; color: white;">Visit Instagram Account</a>
         
     <script src="scriptS.js"></script>
 </body>
